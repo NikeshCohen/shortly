@@ -1,0 +1,393 @@
+/* Imports */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+:root {
+  --Cyan: #2acfcf;
+  --Dark-Violet: #3b3054;
+  --Red: #f46262;
+  --Gray: #bfbfbf;
+  --Gray-light: #f0f1f6;
+  --Grayish-Violet: #9e9aa7;
+  --Very-Dark-Blue: #35323e;
+  --Very-Dark-Violet: #232127;
+  --br: 3rem;
+}
+
+/* HTML Elements */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  /* overflow-x: hidden; */
+}
+
+body {
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: var(--br);
+  background: var(--Cyan);
+}
+
+/* Reuseable Elements */
+
+.heading {
+  font-size: 4rem;
+}
+
+.subheading {
+  font-size: 2rem;
+}
+
+.link {
+  color: var(--Grayish-Violet);
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.link:hover {
+  color: var(--Very-Dark-Violet);
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.btn {
+  color: white;
+  background-color: var(--Cyan);
+  border-radius: var(--br);
+  cursor: pointer;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  border: solid 0.2rem transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  color: var(--Cyan);
+  border: solid 0.2rem var(--Cyan);
+  background-color: transparent;
+}
+
+.btn:active {
+  transform: translateY(0.2rem);
+}
+
+.cta {
+  padding: 2rem 3rem;
+  width: 24rem;
+}
+
+/* Header */
+
+.nav {
+  justify-content: space-between;
+  margin: 4rem 12rem;
+}
+
+.page-links {
+  align-items: center;
+  gap: 4rem;
+}
+
+.authentication {
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Hero */
+
+.hero {
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  gap: 4rem;
+  padding: 12rem 12rem 18rem 12rem;
+}
+
+.hero-heading {
+  font-size: 8rem;
+}
+
+.hero-text {
+  color: var(--Grayish-Violet);
+  padding-bottom: 4rem;
+}
+
+/* Links Section */
+
+.links-section {
+  background-color: var(--Gray-light);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 12rem;
+  gap: 2rem;
+}
+
+.link-input {
+  background-color: var(--Dark-Violet);
+  background-image: url(../images/bg-shorten-desktop.svg);
+  border-radius: var(--br);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: -70px;
+  gap: 2rem;
+  padding: 4rem;
+  margin: 0 16rem;
+  width: 80%;
+}
+
+.input-flied {
+  font-family: inherit;
+  outline: none;
+  font-size: 1.8rem;
+  width: 80%;
+  height: 2em;
+  padding: 3rem;
+  border-radius: 2rem;
+  border: solid 0.4rem transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+.input-flied:focus {
+  border: solid 0.4rem var(--Cyan);
+}
+
+.error {
+  border: solid 0.4rem var(--Red) !important;
+  animation: shake 0.2s linear 3;
+}
+
+.error.input-flied::placeholder {
+  color: var(--Red);
+}
+
+.input-btn {
+  border-radius: 2rem;
+  width: 16%;
+  padding: 2.4rem;
+}
+
+.input-btn:hover {
+  border: 0.2rem solid transparent;
+  background-color: var(--Cyan);
+  color: white;
+}
+
+.response {
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  border-radius: 2rem;
+  width: 80%;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.original-link {
+  color: var(--Grayish-Violet);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 2.4rem;
+  width: 600px;
+}
+
+.short-link {
+  color: var(--Cyan);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  font-size: 2.4rem;
+}
+
+.short-link:hover {
+  color: var(--Dark-Violet);
+}
+
+.output {
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.copy-btn {
+  border-radius: var(--br);
+}
+
+.copied-btn {
+  background-color: var(--Dark-Violet);
+}
+
+.copied-btn:hover {
+  color: white;
+  background-color: var(--Dark-Violet);
+  border: 0.2rem solid var(--Dark-Violet);
+}
+
+/* Features: Stats */
+
+.features {
+  background-color: var(--Gray-light);
+  align-items: center;
+  padding: 12rem;
+}
+
+.features-heading-subtext {
+  color: var(--Grayish-Violet);
+  text-align: center;
+}
+
+.feature-cards {
+  align-items: center;
+}
+
+.feature-card {
+  background-color: white;
+  position: relative;
+  border-radius: var(--br);
+  padding: 3rem;
+  width: 40rem;
+}
+
+.feature-card:nth-child(3) {
+  margin-top: 6rem;
+}
+
+.feature-card:last-child {
+  margin-top: 12rem;
+}
+
+.img-div {
+  background-color: var(--Dark-Violet);
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -50px;
+  left: 20px;
+  border-radius: 50%;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.feature-card-subheading {
+  margin: 5rem 0 1rem 0;
+}
+
+.features-card-subheading-subtext {
+  color: var(--Grayish-Violet);
+}
+
+.hr {
+  width: 4rem;
+  border-top: solid 1rem var(--Cyan);
+}
+
+/* Call To Action */
+
+.cta-section {
+  background-color: var(--Dark-Violet);
+  color: white;
+  background-image: url(../images/bg-boost-desktop.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  padding: 4rem;
+}
+
+.cta-heading {
+  margin-bottom: 2rem;
+}
+
+.cta-btn:hover {
+  color: white;
+  background-color: var(--Cyan);
+}
+
+/* Footer */
+
+.footer {
+  color: white;
+  background-color: var(--Very-Dark-Violet);
+  justify-content: space-around;
+  padding: 12rem 4rem 6rem 4rem;
+}
+
+.footer-subheading {
+  margin-bottom: 2rem;
+}
+
+.footer-link {
+  margin-bottom: 1rem;
+}
+
+.footer-link:hover {
+  color: var(--Cyan);
+}
+
+.footer-icon {
+  width: 5rem;
+  padding-right: 2rem;
+}
+
+.footer-icon:hover {
+  cursor: pointer;
+  stroke: var(--Cyan);
+}
+
+/*  Animations */
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
