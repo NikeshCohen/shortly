@@ -10,34 +10,59 @@ const inputBtn = document.querySelector(".input-btn");
 
 // // Variables //
 
-let originalLink;
-let shortLink = "https://shorturl.at/PX358";
+let longUrl;
+let shortUrl;
 
 // Functions //
 
 const responseAdded = (event) => {
   const copyBtn = document.querySelector(".copy-btn");
-  navigator.clipboard.writeText(shortLink);
+  const link = document.querySelector(".short-link").innerHTML;
+
+  navigator.clipboard.writeText(link);
   copyBtn.innerHTML = "Copied!";
   copyBtn.classList.add("copied-btn");
 };
 
-const insertHTML = () => {
-  originalLink = input.value;
+async function apiRequest() {
+  const longUrl = input.value;
 
-  const clientResponse = `
-  <div class="flex response">
-  <p class="original-link">${originalLink}</p>
-  <div class="flex output">
-    <a href="${shortLink}" target="”_blank”" class="short-link">
-      ${shortLink}
-    </a>
-    <button onclick="responseAdded()" class="btn copy-btn">Copy</button>
-  </div>
-</div>`;
+  const myHeaders = new Headers();
+  myHeaders.append("apikey", "WfpeGneu2wFBfxZyxdSJkFO6pezNju9x");
 
-  linksSection.innerHTML += clientResponse;
-};
+  const requestOptions = {
+    method: "POST",
+    redirect: "follow",
+    headers: myHeaders,
+    body: longUrl,
+  };
+
+  try {
+    const response = await fetch(
+      "https://api.apilayer.com/short_url/hash",
+      requestOptions
+    );
+    const result = await response.json();
+    const shortUrl = result.short_url;
+
+    const clientResponse = `
+      <div class="flex response">
+        <p class="original-link">${longUrl}</p>
+        <div class="flex output">
+          <a href="${shortUrl}" target="”_blank”" class="short-link">
+            ${shortUrl}
+          </a>
+          <button onclick="responseAdded()" class="btn copy-btn">Copy</button>
+        </div>
+      </div>
+    `;
+
+    inputBtn.innerHTML = "Shorten it!";
+    linksSection.innerHTML += clientResponse;
+  } catch (error) {
+    console.error("error", error);
+  }
+}
 
 // Event Listeners //
 
@@ -49,11 +74,11 @@ inputBtn.addEventListener("click", () => {
       input.classList.remove("error");
     }, 2000);
   } else {
-    insertHTML();
+    inputBtn.innerHTML = "Loading...";
+    apiRequest();
   }
 });
 
 mobileBtn.addEventListener("click", () => {
   mobileNav.classList.toggle("show-mobile");
-  console.log("click");
 });
