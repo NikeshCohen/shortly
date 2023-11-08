@@ -150,6 +150,11 @@
   }
 }
 @media (max-width: 27em) {
+  .show-mobile {
+    left: 2rem;
+    right: 2rem;
+  }
+
   .links-section {
     padding-top: 16rem;
   }
@@ -158,5 +163,13 @@
   .short-link {
     font-size: 1.8rem;
     width: 80%;
+  }
+
+  .features {
+    padding: 8rem 3rem 6rem 3rem;
+  }
+
+  .feature-card {
+    width: 100%;
   }
 }
