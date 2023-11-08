@@ -1,0 +1,162 @@
+@media (max-width: 64em) {
+  .nav {
+    margin: 4rem 6rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .hero-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .input-btn {
+    padding: 2.4rem 1rem;
+    font-size: 1.5rem;
+  }
+
+  .features-heading-subtext {
+    padding-bottom: 8rem;
+  }
+
+  .img-div {
+    left: calc(50% - 6rem);
+  }
+
+  .feature-cards {
+    flex-direction: column;
+  }
+
+  .feature-card {
+    text-align: center;
+    width: 80%;
+    margin: 0 !important;
+  }
+
+  .feature-card-subheading {
+    margin: 4rem 0 1rem 0;
+  }
+
+  .hr {
+    width: 1rem;
+    height: 10rem;
+    border-top: 0;
+    border-right: solid 1.2rem var(--Cyan);
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 58em) {
+  .nav-link {
+    display: none;
+  }
+
+  .authentication {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    height: 5rem;
+    width: 5rem;
+    display: block;
+  }
+}
+
+@media (max-width: 43em) {
+  br {
+    content: "";
+  }
+
+  br::after {
+    content: " ";
+  }
+
+  .heading {
+    text-align: center;
+    font-size: 3.8rem;
+    padding-bottom: 1.6rem;
+  }
+
+  .nav {
+    margin: 4rem 3rem;
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+
+  .hero {
+    padding: 4rem 4rem 18rem 4rem;
+  }
+
+  .link-input {
+    background-image: url(../images/bg-shorten-mobile.svg);
+    flex-direction: column;
+    padding: 3rem 4rem;
+    width: 90%;
+    margin: 0;
+  }
+
+  .input-flied,
+  .input-btn {
+    width: 100%;
+    padding: 2.4rem;
+  }
+
+  .input-btn {
+    font-size: 1.8rem;
+  }
+
+  .response {
+    flex-direction: column;
+    align-items: start;
+    width: 90%;
+  }
+
+  .original-link {
+    padding-bottom: 2rem;
+    width: 80%;
+  }
+
+  .output {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-top: 0.2rem solid var(--Grayish-Violet);
+    width: 100%;
+  }
+
+  .short-link {
+    padding-top: 2rem;
+    width: 80%;
+  }
+
+  .copy-btn {
+    width: 100%;
+  }
+
+  .features {
+    padding: 8rem 4rem 6rem 4rem;
+  }
+}
+@media (max-width: 27em) {
+  .links-section {
+    padding-top: 16rem;
+  }
+
+  .original-link,
+  .short-link {
+    font-size: 1.8rem;
+    width: 80%;
+  }
+}
