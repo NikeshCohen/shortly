@@ -5,30 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="javascript/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
     <link
       rel="icon"
       type="image/png"
       sizes="512x512"
       href="./images/link.png"
     />
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <title>Shortly | URL shortening</title>
   </head>
   <body>
     <header class="flex nav">
       <div class="flex page-links">
         <img src="images/logo.svg" alt="Shortly Logo" />
-        <a href="#" class="link page-link">Features</a>
-        <a href="#" class="link page-link">Pricing</a>
-        <a href="#" class="link page-link">Resources</a>
+        <a href="#" class="link nav-link page-link">Features</a>
+        <a href="#" class="link nav-link page-link">Pricing</a>
+        <a href="#" class="link nav-link page-link">Resources</a>
       </div>
       <div class="flex authentication">
         <p class="link authentication-link">Login</p>
         <button class="btn authentication-btn">Sign Up</button>
       </div>
+      <ion-icon name="menu-outline" class="mobile-menu-btn"></ion-icon>
     </header>
+    <section class="flex column mobile-nav">
+      <div class="flex column page-links-mobile">
+        <a href="#" class="link nav-link-mobile page-link">Features</a>
+        <a href="#" class="link nav-link-mobile page-link">Pricing</a>
+        <a href="#" class="link nav-link-mobile page-link">Resources</a>
+      </div>
+      <hr class="mobile-nav-hr" />
+
+      <a class="link authentication-link-mobile page-link">Login</a>
+      <button class="btn authentication-btn-mobile">Sign Up</button>
+    </section>
     <section class="flex hero">
-      <div>
+      <div class="hero-info">
         <h1 class="heading hero-heading">
           More than just <br />
           shorter links
