@@ -2,6 +2,8 @@
 
 // DOM Elements //
 
+const mobileBtn = document.querySelector(".mobile-menu-btn");
+const mobileNav = document.querySelector(".mobile-nav");
 const linksSection = document.querySelector(".links-section");
 const input = document.querySelector(".input-flied");
 const inputBtn = document.querySelector(".input-btn");
@@ -49,4 +51,9 @@ inputBtn.addEventListener("click", () => {
   } else {
     insertHTML();
   }
+});
+
+mobileBtn.addEventListener("click", () => {
+  mobileNav.classList.toggle("show-mobile");
+  console.log("click");
 });
