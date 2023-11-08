@@ -45,7 +45,7 @@ Users should be able to:
 
 ### Continued development
 
-**Note: The original API I used for this project is no longer working, I will push an update in the near future that fixes this issue**
+**Note: Seems to be a bug whereby the user can only submit one request, will be fixed and an update will be pushed in the near future**
 
 ## Author
 
