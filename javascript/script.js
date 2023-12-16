@@ -3,7 +3,6 @@ const mobileNav = document.querySelector(".mobile-nav");
 const linksSection = document.querySelector(".links-section");
 const input = document.querySelector(".input-flied");
 const inputBtn = document.querySelector(".input-btn");
-const copyBtn = document.querySelector(".copy-btn");
 
 // Function to handle the API request
 async function apiRequest() {
@@ -86,14 +85,15 @@ const handleInputError = () => {
   }, 2000);
 };
 
-// const copyBtnChange = () => {
-//   copyBtn.classList.add("copied");
-//   copyBtn.innerHTML = "copied";
-//   setTimeout(() => {
-//     copyBtn.innerHTML = "copy";
-//     copyBtn.classList.remove("copied");
-//   }, 2000);
-// };
+const copyBtnChange = () => {
+  const copyBtn = document.querySelector(".copy-btn");
+  copyBtn.classList.add("copied");
+  copyBtn.innerHTML = "copied";
+  setTimeout(() => {
+    copyBtn.innerHTML = "copy";
+    copyBtn.classList.remove("copied");
+  }, 2000);
+};
 
 // Copy link to clip board
 function linkCopied() {
