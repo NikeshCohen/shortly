@@ -66,8 +66,6 @@
   }
 
   .mobile-menu-btn {
-    height: 5rem;
-    width: 5rem;
     display: block;
   }
 }
@@ -158,6 +156,10 @@
   .show-mobile {
     left: 2rem;
     right: 2rem;
+  }
+
+  .input-btn {
+    padding: 1rem;
   }
 
   .original-link,

@@ -119,6 +119,8 @@ body {
 }
 
 .mobile-menu-btn {
+  align-items: center;
+  justify-content: center;
   display: none;
 }
 
@@ -298,11 +300,11 @@ body {
   border-radius: var(--br);
 }
 
-.copied-btn {
+.copied {
   background-color: var(--Dark-Violet);
 }
 
-.copied-btn:hover {
+.copied:hover {
   color: white;
   background-color: var(--Dark-Violet);
   border: 0.2rem solid var(--Dark-Violet);
