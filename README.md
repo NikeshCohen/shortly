@@ -43,10 +43,6 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 
-### Continued development
-
-**Note: Seems to be a bug whereby the user can only submit one request, will be fixed and an update will be pushed in the near future**
-
 ## Author
 
 - Frontend Mentor - [@NikeshCohen](https://www.frontendmentor.io/profile/NikeshCohen)
